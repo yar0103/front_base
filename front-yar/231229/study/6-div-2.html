@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    .header {
+      width: 100%;
+      height: 100px;
+      background-color: antiquewhite;
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+    }
+
+    content.aside {
+      width: 30%;
+      height: 500px;
+      background-color: teal;
+    }
+
+    content.main {
+      width: 70%;
+      height: 500px;
+      background-color: blueviolet;
+    }
+
+    footer {
+      width: 100%;
+      height: 100px;
+      background-color: darkolivegreen;
+    }
+  </style>
+</head>
+<body>
+  <!-- div : 영역태그, 일반적으로 묶을때
+  
+  의미를 부여하는 태그 : 시맨틱태그 (스크린 리더에서 읽어줌)
+
+  #영역에 대한 내용
+  header : 헤더영역
+  nav : 메뉴영역
+  aside : 사이드바
+  main : 메인 컨텐츠
+  section : 주제별
+  article : 블로그,뉴스 등 별도의 독립적 컨텐츠
+  footer : 푸터영역
+  
+  #내용에 대한 내용
+  strong : 강한강조
+  em : 약한강조
+
+  -->
+
+  <header class="header"></header>
+  <div class="content">
+    <aside class="aside"></aside>
+    <main class="main">
+      <section class="sec1">section1</section>
+      <section class="sec2">section2</section>
+      <section class="sec3">section3</section>
+      <section class="sec4">section4</section>
+    </main>
+  </div>
+  <footer class="footer"></footer>
+</body>
+</html>

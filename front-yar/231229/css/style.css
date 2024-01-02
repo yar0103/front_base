@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0; box-sizing: border-box; }
+
+ul,ol,li { list-style: none;}
+
+a { text-decoration: none;}
+
+header, footer, div, section {
+  border: 1px solid blue;
+}
+
+header, footer { height: 100px;}
+
+.inner { width: 1170px; margin: 0 auto; border: 1px solid red; background-color: lightblue;}
+
+.content {width: 100%; padding: 150px 0;}
+
+/* 
+  높이지정은 자동으로 자식 높이만큼 잡힌다
+  자식 높이들의 합산+패딩+테두리=나의높이
+  -자식추가 : 자동으로 높이 늘어남
+  -고정 높이했을때 자식추가 : 다른영역 침범
+*/

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      width: 800px;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    tr, td{
+      border: 1px solid black;
+    }
+
+    td[rowspan]{background-color: yellow;}
+    td[colspan]{background-color: orange;}
+    td[colspan="3"]{background-color: green;}
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="3">표연습-1</td>
+      <td colspan="3">표연습-2</td>
+    </tr>
+    <tr>
+      <td rowspan="2">2-1</td>
+      <td colspan="2">2-2</td>
+      <td rowspan="2">2-3</td>
+      <td colspan="2">2-4</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+      <td>3-3</td>
+      <td>3-4</td>
+    </tr>
+    <tr>
+      <td rowspan="2">4-1</td>
+      <td>4-2</td>
+      <td>4-3</td>
+      <td rowspan="2">4-4</td>
+      <td>4-5</td>
+      <td>4-6</td>
+    </tr>
+    <tr>
+      <td>5-1</td>
+      <td>5-2</td>
+      <td>5-3</td>
+      <td>5-4</td>
+    </tr>
+    <tr>
+      <td>6-1</td>
+      <td colspan="2">6-2</td>
+      <td>6-3</td>
+      <td colspan="2">6-4</td>
+    </tr>
+  </table>
+</body>
+<body>
+  <table>
+    <caption>
+      <thead>
+        <tr>
+          <td></td>
+        </tr>
+      </thead>
+    </caption>
+  </table>
+</body>
+</html>

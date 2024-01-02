@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      width: 800px;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    tr:nth-of-type(2){background-color: antiquewhite;}
+
+
+    tr, td{
+      height: 30px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    tr>th*5
+    tr*5>th+td*4
+
+    행단위 선택 : tr:nth-of-type(2)
+    열단위 선택 : 캡션 밑에 colgroup -> 
+                 <col style="background-color: burlywood;">
+  -->
+
+  <table>
+    <caption>2월 판매기록</caption>
+    <colgroup>
+      <col style="background-color: burlywood;">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <th>항목</th>
+      <th>항목별비용</th>
+      <th>원가가산율</th>
+      <th>총판매</th>
+      <th>총수익</th>
+      <th>배송요금/항목</th>
+      <th>배송비/항목</th>
+      <th>항목별수익(배송비포함)</th>
+      <th>반품</th>
+      <th>총수익</th>
+    </thead>
+    <tbody>
+      
+    </tbody>
+      
+  </table>
+</body>
+</html>
