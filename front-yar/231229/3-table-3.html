@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      width: 800px;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    tr, td{
+      border: 1px solid black;
+    }
+
+    td[rowspan]{background-color: yellow;}
+    td[colspan]{background-color: orange;}
+    td[colspan="3"]{background-color: green;}
+  </style>
+</head>
+<body>
+  <h1>표 연습</h1>
+
+  <h2>표2</h2>
+  <table>
+    <tr class="orange">
+      <td colspan="3">1-1</td>
+      <td colspan="3">1-2</td>
+    </tr>
+    <tr>
+      <td rowspan="2">2-1</td>
+      <td colspan="2">2-2</td>
+      <td rowspan="2">2-3</td>
+      <td colspan="2">2-4</td>
+    </tr>
+    <tr>
+      <td>3-1</td>
+      <td>3-2</td>
+      <td>3-3</td>
+      <td>3-4</td>
+    </tr>
+    <tr>
+      <td rowspan="2">a-1</td>
+      <td colspan="2">a-2</td>
+      <td rowspan="2">a-3</td>
+      <td colspan="2">a-4</td>
+    </tr>
+    <tr>
+      <td>b-1</td>
+      <td>b-2</td>
+      <td>b-3</td>
+      <td>b-4</td>
+    </tr>
+    <tr>
+      <td>c-1</td>
+      <td colspan="2">c-2</td>
+      <td>c-3</td>
+      <td colspan="2">c-4</td>
+    </tr>
+  </table>
+</body>
+</html>
