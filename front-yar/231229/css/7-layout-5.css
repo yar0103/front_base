@@ -1,0 +1,23 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none;}
+
+/*
+  .inner : 1170px (간격 30px)
+  2개 : 570px
+  3개 : 370px
+  4개 : 270px
+
+  간격x 경우          간격0 (간격3%)
+  2개 : 50%           48.5% 
+  3개 : 33.3333%      31.333%
+  4개 : 25%           22.75%
+*/
+
+
+/* 헤더, 섹션, 푸터 */
+
+
+
+
+

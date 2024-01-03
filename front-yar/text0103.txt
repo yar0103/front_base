@@ -1,0 +1,68 @@
+#0103
+#모든강의자료 코드
+	https://koritic.cafe24.com/
+
+메뉴 안에 유틸 안에 ls 있다
+각 태그마다 클래스있다
+
+
+span VS p
+
+#a태그에도 padding 줄수있다
+
+# 거의 display: flex; 
+      flex-wrap: wrap;
+      justify-content 이렇게 사용하면 끝
+
+#flex-wrap : nowrap; (기본값)
+ㄴ요소들을 정렬하는 기능
+ㄴnowrap : 자동
+ㄴwrap : static
+ㄴwrap-reverse : 반대
+
+#flex 정렬
+justify-content : (center) (flex-start 왼쪽붙어시작) (flex-end 오른쪽붙어시작)
+	         (space-between) (space-around)
+align-items : (center) (flex-start) (flex-end) (baseline글자의밑부분을 기준으로 정렬)
+
+★인라인 태그 : a, span, 가상요소, input (글자 취급이기때문에 특징있음)
+	ㄴ 특징 : width, height, margin-상하, padding-상하 = 적용x 
+	ㄴ 해결방법 : display속성을 bloack 바꾼다
+★블록요소에서 글자가 세로 가운데 정렬 x
+	ㄴ 해결방법 : line-height 줄간격속성을 높이와 동일하게 설정 (세로가운데정렬 효과)
+	ㄴ padding, margin으로 세로 가운데 정렬x (여백 기능이기때문에)
+
+#font : 크기 '글꼴'; (이 2가지는 기본)
+
+#반응형 페이지 작성 코드 (미디어쿼리 : html 크기를 기준으로 작동) / html=뷰포트=화면보이는 영역
+	ㄴ주의사항1 : and 뒤 무조건 한칸 띄어쓰기
+	ㄴ주의사항2 : px표시 필수 !
+	ㄴ주의사항3 : min일땐 작은수 -> 큰수 작성
+	ㄴ주의사항4 : max일땐 큰수 -> 작은수 작성
+
+	@media 미디어유형 and(조건){
+	실행내용
+	}
+
+	ex)
+	@media screen and(min-width:320px) and (max-width: 1170px){
+	실행내용
+	}
+
+	-미디어 쿼리 유형
+	-all : 모든장치
+	-print : 인쇄장치
+	-screen : 스마트기기, px화면
+	-projection : 프로젝트 장치
+	-speach : 음성출력장치
+	-braile : 점자표시장치
+
+	*1200px , 768px, 480px (섹션별로 작성) 
+	!point! 고정px을 상대%로 바꾼다
+	
+
+# <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	ㄴ뜻 : viewport 크기를 content(디바이스) 크기로 맞춰줭
+	ㄴ device-width : 실제 스크린화면의 해상도(px)
+	ㄴ initial-scale=1.0 : 확대,축소 될 비율 / ex) 1.5(150%)
+	

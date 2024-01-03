@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      블록요소 : 기본크기는
+      너비 : 부모 크기의 100%
+      높이 : 자식 크기만큼 자동으로 잡힌다
+
+      인라인요소 - 너비 / 자식 : 자기 크기만큼 잡힌다
+                - 글자처럼 취급, 나란히 배치
+
+      flex 적용하고 나면 (방향 : row / 줄바꿈 : nowrap)
+      - row일때 너비 : 자기크기 / 높이 : 부모크기 로 잡힌다
+      - column일때 너비 : 부모크기 / 높이 : 자기크기 로 잡힌다
+      - warp속성 : 줄바꿈 / 높이는 포함요소들끼리 n빵한 크기로 잡힘
+    */
+    .container {
+      width: 600px; height: 300px;
+      margin: 0 auto; border: 5px solid black;
+      display: flex; 
+      flex-wrap: wrap;
+      /* flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; */
+    }
+    .box{width: 150px; height: 100px; background-color: pink; border: 1px solid red;}
+
+    /* nowrap 1줄시 align-item으로 세로정렬 */
+    .nowrap{flex-wrap: nowrap; justify-content: flex-end;}
+
+    /* wrap 2줄이상 = wrap 상태 - align-content 세로정렬*/
+    .wrap{flex-wrap: wrap; 
+          justify-content: flex-end;
+          align-items: center;}
+    </style>
+</head>
+<body>
+  <div class="container nowrap">
+    <div class="box">1</div>
+    <div class="box" style="font-size: 24px;">2</div>
+    <div class="box" style="font-size: 48px;">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+
+  </div>
+
+  <div class="container wrap">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    
+  </div>
+</body>
+</html>

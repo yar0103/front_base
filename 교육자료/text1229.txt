@@ -1,0 +1,40 @@
+vs code 확장기능 설치 
+1. korean : 한글 언어팩
+2. live server: 실시간 변경내용 브라우저에서 확인 (Ctrl + s 로 반영)
+3. auto tag: 태그 입력시 닫는태그 자동 설정
+4. prittier: 들여쓰기 라인 정렬
+5. indent-rainbox: 들여쓰기 구분(색상으로)
+
+
+SVG : 벡터 이미지로 되있어 코드 수정시 이미지 수정되는 파일 형식
+
+#단축키
+1. Ctrl + , : Setting
+ㄴ wrap -> Editor:Word Wrap " on " 으로 설정 하면 자동 줄바꿈
+ㄴ brow -> live server>settings: custom browser : "chrome" 설정
+ㄴ hover -> editor>hover:enabled : "체크해제" (도움말 안나오게함)
+
+p태그의 특징 : 단락구조로 이뤄져있다 
+	       따라서 엔터, 들여쓰기가 전부 무시됨(내가 원하는대로 안나옴)
+	       브라우저 너비보다 내용이 많으면 자동 줄바꿈 처리
+
+pre태그의 특징 : 텍스트 작성한 구조 그대로 출력
+	         따라서 엔터, 들여쓰기가 입력한 모양 그대로 출력됨
+	         코드내용 출력할때 주로 사용
+
+blockquote태그의 특징 : 책, 기사, 뉴스 등 인용문 활용시 사용 (자동 들여쓰기됨)
+
+Lorem 태그 : 더미 영어 텍스트
+
+#블록태그 특징 : 자동줄바꿈 커다란 한덩어리
+#인라인태그 특징 : 한줄로 표시 자기영역만 / a,span,input 가상요소
+
+#table 빨리 만들기
+	tr*8>td*5 (tr을 8세트 만들고 td를 5개 만들어줘)
+	td*3{1-$}  (td를 3개 만들면서 안의 내용은 1-숫자로 해줘)
+	tr>td*6{2-$} (tr안에 td6개만들고 내용은 2-숫자로 해줘)
+
+#rowspan : 세로줄 합치기
+#colspan : 가로줄 합치기
+
+#td[rowspan]{background-color: yellow;}  -> td의 rowspan속성이 있는애들만 배경색을 노란색으로
