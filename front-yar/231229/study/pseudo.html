@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+    .box::after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0; top: 25%;
+      width: 10px; height: 50%;
+      background-color: red;
+    }
+
+    .list p::before{content:'- '} /* content 에 내용씀 꼭드가야됨*/
+    .member p::after{content: ' welcome';}
+  </style>
+</head>
+<body>
+  <h2>가상요소 - pseudo</h2>
+  <div class="box">pseudo</div>
+
+  <div class="list">
+    <p>test</p>
+    <p>test</p>
+    <p>test</p>
+    <p>test</p>
+  </div>
+
+  <div class="member">
+    <p>name</p>
+    <p>name</p>
+    <p>name</p>
+    <p>name</p>
+  </div>
+</body>
+</html>

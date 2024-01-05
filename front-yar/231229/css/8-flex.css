@@ -1,8 +1,0 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-
-.ex { width: 200px; height: 200px; 
-      margin: 10px;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      background-color: brown;}

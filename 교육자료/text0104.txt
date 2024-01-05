@@ -1,0 +1,89 @@
+#0104
+
+http://gridcalculator.dk/#/1920/4/20/20
+ㄴ 그리드 칼큘레이터
+
+#position
+	position : 좌표값을 지정해서 위치를 조정할 수 있는 속성
+
+	*static- 좌표값 지정x, 배치된 대로나온다, z-index 불가
+	          (block-위아래, inline-글자처럼, flex-row/column)
+	*relative- 현재 위치에서 좌표값 지정 가능
+	*absolute- 부모기준으로 좌표값 지정
+		  직계만 부모되 될수있는게 아님
+		  상위애들중 기준점을 줘야해 ( position : relative )
+		  ㄴ근데 absoult, fixed 있음 걍 둬
+		  조부모에게 기준잡고싶은데 부모한테 이미 있는 경우
+		  ㄴ부모position : static 로
+	*fixed- 브라우저 기준으로 좌표값 지정
+	*sticky- fixed + relative 섞인느낌 특정구간내 브라우저 기준 지정
+
+	z-index : 객체가 겹칠때 우선순위 조정
+		기본값 0 / 음수권장x : 1-5 사용함
+		static상태선 사용 불가
+
+#같은클래스를 가진 5개 박스를 하나씩 타겟할때
+.box:nth-of-type(숫자)
+
+#객체의 중심점을 정가운데로 맞추는 공식
+{left: 50%; top:50%; transform: translate(-50%, -50%);}
+
+#nth-child(n) VS nth-of-type(n)
+:자식중 li가 n번째 요소면 선택
+:
+
+#flex 지정 - row방향
+	세로 가운데 정렬
+	nowrap - align-items: center; 부모한테 높이가 있어야함
+	wrap - 
+
+#자바스크립트#
+
+1 ) 요소선택 : 복수의 요소를 가져올땐 [0]형식으로 선택해 가져옴
+
+ㄴ 태그명으로 선택
+document.getElementsByTagName('div')
+
+ㄴ 아이디로 선택
+document.getElementsById('div')
+
+ㄴ 클래스로 선택
+document.getElementsByClassName('div')
+document.querySelectorAll('.inner') : 복수의 요소를 가져올때
+
+ㄴ 선택자로 선택 (단수)
+document.queryContent('div')
+
+2 ) 이벤트연결
+ㄴ 단수
+idToggle.addEventListener('click', function(){});
+queryContent.addEventListener('focus', function(){});
+
+ㄴ 복수 (인덱스번호 지정 필수)
+classBox[0].addEventListener('click', function(){})
+queryInner[1].addEventListener('keyup', function(){})
+
+3 ) css 바꾸기 
+ㄴ queryInner[0].style.color = 'red'; (요소.style.속성 = '값'
+ㄴ queryInner[0].style.lineHeight = '50px'; (카멜스타일로 쓴다)
+ 
+
+ex)
+      1. toggle-btn 클릭시 gnb-wrap 보이게하기
+      2. 다시 버튼 클릭시 gnb-wrap 안보이게
+
+	->이렇게 사용하는거지만 너무길어
+    document.querySelector('.toggle-btn').addEventListener('click',function(){
+      document.querySelector('.gnv-wrap').style.display= 'block';
+    });
+	->이렇게 바꿔씀
+
+
+#브라우저의 너비 기준 단위 : vw(viewport width) , vh(viewport height)
+	100vw = 현재 뷰포트 전체 너비
+	100vh = 현재 뷰포트 전체 높이
+
+	(고정크기 단위 : px)
+	박스 : %
+	좌우패딩,마진 등 : vw, vh, rem
+	폰트 : vw, vh, rem

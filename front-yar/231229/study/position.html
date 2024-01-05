@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      position : 좌표값을 지정해서 위치를 조정할 수 있는 속성
+
+      static-좌표값 지정x, 배치된 대로나온다(block-위아래, inline-글자처럼, flex-row/column)
+      relative-현재 위치에서 좌표값 지정 가능
+    */
+
+    .wrap{
+      position: relative; left: 100px; top: 100px;
+      width: 400px; height: 400px; border: 10px solid black;
+    }
+    .box{
+      position: absolute;
+      width: 100px; height: 100px; background-color: pink;
+    }
+
+    .box:nth-of-type(1){left: 0; top: 0; z-index: 1;}
+    .box:nth-of-type(2){right: 0; top: 0;}
+    .box:nth-of-type(3){right: 0; bottom: 0;}
+    .box:nth-of-type(4){left: 0; bottom: 0;}
+    .box:nth-of-type(5){right: 50%; top: 50%; 
+                        transform: translate(-50%, -50%);}
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/layout-6.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="inner">
+      <h1 class="logo"><a href="#">LOGO</a></h1>
+      <nav class="gnb-wrap">
+        <ul id="gnb">
+          <li><a href="#">home</a></li>
+          <li><a href="#">shop</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">conacts</a></li>
+        </ul>
+      </nav>
+      <!--toggle : 스위치 (on off 반복)-->
+      <button type="button" class="toggle-btn">
+        <sapn></sapn>
+        <sapn></sapn>
+        <sapn></sapn>
+      </button>
+    </div>
+  </header>
+  <section class="visual"></section>
+  <section class="con1 content">
+    <div class="inner">
+      <h2 class="title">Title1</h2>
+      <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+    </div>
+  </section>
+  <section class="con2 content full">
+    <div class="inner">
+      <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">
+          <h2 class="title">Title2</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="con3 content">
+    <div class="inner">
+      <h2 class="title">Title3</h2>
+      <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+  </section>
+  <section class="con4 content">
+    <div class="inner">
+      <h2 class="title">Title4</h2>
+      <div class="wrap">
+        <div class="box">1</div>
+      </div>
+    </div>
+  </section>
+  <section class="con5 content">
+    <div class="inner">
+      <h2 class="title">Title5</h2>
+      <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="inner">
+      <div class="info">
+        <h1 class="logo"><a href="#">logo</a></h1>
+        <p class="copyright">@copyright</p>
+      </div>
+      <div class="menu">
+        <nav class="info-menu">
+          <ul class="list">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Plugins</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">GitHub</a></li>
+          </ul>
+        </nav>
+        <div class="sns">
+          <a href="#">★</a>
+          <a href="#">★</a>
+          <a href="#">★</a>
+          <a href="#">★</a>
+          <a href="#">★</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="javascript/test.js"></script>
+  <script>
+    /*
+      1. toggle-btn 클릭시 gnb-wrap 보이게하기
+      2. 다시 버튼 클릭시 gnb-wrap 안보이게
+    */
+    let toggle = document.querySelector('.toggle-btn')
+    let isOpen = false;
+
+    toggle.addEventListener('click',function(){
+      isOpen = !isOpen;
+      if(isOpen){
+        document.querySelector('.gnv-wrap').style.display= 'block';
+      }else{
+        document.querySelector('.gnv-wrap').style.display= 'none';
+      }
+    });
+
+  </script>
+</body>
+</html>

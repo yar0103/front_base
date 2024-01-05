@@ -11,33 +11,99 @@ a{text-decoration: none;}
 .content.full .inner{width: 100%;}
 
 
-.content .title{margin: 0 0 40px; font: bold 24px 'inherit'; text-align: center; color: #444;}
+.content .title{margin: 0 0 40px; font: bold 1.75rem 'inherit'; text-align: center; color: #444;}
 .content .wrap{display: flex; flex-direction: row; flex-wrap: wrap;justify-content: space-between;}
 .content .box{height: 300px; border: 1px solid red;}
 
-.header{width: 100%; background-color: #ddd;}
-.header .inner{display: flex; justify-content: space-between;}
-.header .logo a{display: block; line-height: 80px;}
+/*
+  em, rem 단위
+  상대크기 : 폰트기준. 상대크기
+  em : 직계부모의 폰트 크기가 1em 기준됨
+       계층내려갈수록 배수됨
+       ex)부모 14px -> 자식 2em : 28px
+  rem : html의 최상의 태그의 폰트 크기를 1em 잡는다
+        root(최상위태그=html) em
+        내 위로 최고 부모의 폰트 크기가 기준됨
+        html태그의 폰트 사이즈를 기준으로 배수를 잡는다
 
-.header .gnb-wrap{}
+  기준크기 : 16px = 1 rem
+
+  24px 하고 싶으면?
+  24 / 16 = 1.5 rem
+*/
+@media screen and (max-width: 1200px){
+  .content {padding: 120px 40px;}
+  .inner{width: 100%;}
+}
+@media screen and (max-width: 768px) {
+  html{font-size: 14px;}
+}
+
+.header{width: 100%; }
+.header .inner{height: 80px; display: flex; 
+  justify-content: space-between; align-items: center;}
+.header .logo a{display: block; line-height: 50px;}
+
+.header .gnb-wrap{background-color: yellow;}
 #gnb{display: flex;}
 #gnb > li{}
-#gnb > li > a{display: block; line-height: 80px; padding: 0 30px;}
+#gnb > li > a{display: block; line-height: 50px; padding: 0 30px;}
+
+.header .toggle-btn{
+  display: none;
+  width: 30px; height: 36px; padding: 0;
+  background-color: transparent; border: 0;
+}
+
+.header .toggle-btn span {
+  display: block; width: 100%; height: 3px; margin: 7px 0;
+  background-color: #444;
+}
+
+@media screen and (max-width: 1024px) {
+  .header{ padding: 0 40px;}
+  .header .gnb-wrap{
+    display: none;
+    position: fixed; right: 0; top: 80px;
+    width: 300px; height: 100%;
+  }
+  #gnb > li > a {display: block; line-height: 50px; padding: 0 0 0 40px;}
+  #gnb{display: block;}
+
+  .header .toggle-btn{display: block;}
+}
 
 .visual{width: 100%; height: 500px; background-color: lightblue;}
 
-/*
-  - 한줄에 몇개인가? 
-  - 박스 사이에 마진이 있는가?
-  - 여러줄인가?
- */
-.con1 .box{width: 570px; margin: 0 0 30px;}
+.con1 .box{width: 570px; margin: 0 0 1.875rem;}
+@media screen and (max-width: 1200px){
+  .con1 .box{width: 48.5%;}
+}
+@media screen and (max-width: 480px) {
+  .con1 .box{width: 100%;}
+}
 
 .con2 .box{width: 50%;}
+@media screen and (max-width: 768px) {
+  .con2 .box{width: 100%;}
+}
 
 .con3 .box{width: 370px;}
+@media screen and (max-width: 1200px){
+  .con3 .box{width: 31.3333%;}
+}
+@media screen and (max-width: 768px) {
+  .con3 .wrap{justify-content: center;}
+  .con3 .box{width: 100%; max-width: 370px; margin: 0 0 1.5em;}
+}
+@media screen and (max-width: 480px) {
+
+}
 
 .con4 .box{width: 50%;}
+@media screen and (max-width: 768px) {
+  .con4 .box{width: 100%;}
+}
 
 .con5 .box{width: 100%;}
 
