@@ -201,15 +201,12 @@ margin: 0 0 24px;}
 }
 .con-6 .question-list > li .answer {
   width: 100%;
-  height: 0;
+  max-height: 0;
   overflow:  hidden;
   padding: 0 30px;
   font-size: 20px;
   line-height: 1.5;
   transition: 0.3s;
-}
-.con-6 .question-list li:hover .answer{
-  height: 100px;
 }
 
 @media screen and (max-width: 768px) {

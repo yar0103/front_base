@@ -46,7 +46,6 @@ a{text-decoration: none;}
 
 .header .gnb-wrap{background-color: yellow;}
 #gnb{display: flex;}
-#gnb > li{}
 #gnb > li > a{display: block; line-height: 50px; padding: 0 30px;}
 
 .header .toggle-btn{
@@ -67,6 +66,9 @@ a{text-decoration: none;}
     position: fixed; right: 0; top: 80px;
     width: 300px; height: 100%;
   }
+
+  .header .gnb-wrap.active{display: block;}
+  
   #gnb > li > a {display: block; line-height: 50px; padding: 0 0 0 40px;}
   #gnb{display: block;}
 
@@ -111,7 +113,6 @@ a{text-decoration: none;}
 .footer .inner{display: flex; justify-content: space-between;}
 
 .footer .menu .info-menu .list{display: flex;}
-.footer .menu .info-menu .list > li{}
 .footer .menu .info-menu .list > li > a{display: block; padding: 0 30px; line-height: 30px;}
 
 .footer .menu .sns{text-align: right; background-color: pink;}

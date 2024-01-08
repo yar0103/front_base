@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .box{ width: 300px; border: 1px solid pink;}
+    .box .menu {
+      width: 100%; padding: 10px;
+      background-color: transparent;
+      border: none; outline: none;
+      text-align: left;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    /* 패딩이 max-height안에 포함 안됨
+       max-height 적용해도 padding 은 숨겨지지않고 남아있음*/
+    .box .panel {
+      width: 100%; 
+      background-color: red;
+      max-height: 0; overflow: hidden; /* 자식요소가 부모보다 넘치면 감춰라 */
+      transition: .3s;
+    }
+
+    /* 자식요소가 부모의 높이 안에 포함되기 때문에 */
+    .box .panel > div { padding: 30px;}
+
+    /*  box와 on class가 동시 적용시 css 
+    .box.on {background-color: red;} */
+    
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <button class="menu">menu1</button>
+    <div class="panel on">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo provident fuga nostrum modi maiores fugit explicabo? Veniam ratione nisi ea! Eligendi beatae ipsa rem enim nam accusantium quis tenetur aliquam.
+    </div>
+  </div>
+  <div class="box">
+    <button class="menu">menu2</button>
+    <div class="panel on">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo provident fuga nostrum modi maiores fugit explicabo? Veniam ratione nisi ea! Eligendi beatae ipsa rem enim nam accusantium quis tenetur aliquam.
+    </div>
+  </div>
+  <div class="box">
+    <button class="menu">menu3</button>
+    <div class="panel on">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo provident fuga nostrum modi maiores fugit explicabo? Veniam ratione nisi ea! Eligendi beatae ipsa rem enim nam accusantium quis tenetur aliquam.
+    </div>
+  </div>
+  <script src="../javascript/js-basic-1-ex-1.js"></script>
+</body>
+</html>

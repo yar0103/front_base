@@ -111,16 +111,25 @@
       2. 다시 버튼 클릭시 gnb-wrap 안보이게
     */
     let toggle = document.querySelector('.toggle-btn')
+    let gnbWrap = document.querySelector('.gnb-wrap')
     let isOpen = false;
 
     toggle.addEventListener('click',function(){
       isOpen = !isOpen;
       if(isOpen){
-        document.querySelector('.gnv-wrap').style.display= 'block';
+        gnbWrap.classList.add('active') //active클래스 추가
       }else{
-        document.querySelector('.gnv-wrap').style.display= 'none';
+        gnbWrap.classList.remove('active') //active클래스 제거
       }
     });
+
+    window.addEventListener('resize', function(){
+      //브라우저 사이즈 변경될 때마다
+      let winWidth = this.innerWidth
+      if(winWidth < 1024){
+        gnbWrap.classList.remove('active')
+      }
+    })
 
   </script>
 </body>

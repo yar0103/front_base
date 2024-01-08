@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{font-size: 36px;}
+  </style>
+</head>
+<body>
+  <h1>js method</h1>
+  <p id="txt">test</p>
+  <button type="button" id="btn">button</button>
+  <script>
+    //함수 정의
+    function js_method(name){
+      document.getElementById('txt').innerText = name
+    }
+
+    //함수 실행 (=호출)
+    document.getElementById('btn').addEventListener('click', function(){
+      js_method('cat')
+    })
+  </script>
+</body>
+</html>
