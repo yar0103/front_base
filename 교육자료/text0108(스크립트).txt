@@ -67,3 +67,6 @@ on이라는 이벤트 삭제
 
 - scrollWidth : overflow때문에 볼수 없는 폭까지 padding을 포함한 폭
 - scrollHeight : overflow때문에 볼수 없는 높이까지 padding을 포함한 높이
+
+
+# nextElementSibling : 다음 형제요소를 가져와랑

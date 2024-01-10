@@ -95,7 +95,7 @@ a {text-decoration: none;}
 }
 
 .section-1 .item-wrap {
-  flex-direction: column;
+  flex-direction: column.;
   justify-content: space-between;
 }
 

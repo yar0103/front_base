@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .content { width: 100%; padding: 120px 0;}
+    .inner {width: 1170px; margin: 0 auto;}
+    .content .title {margin: 0 0 40px; text-align: center;}
+    .content .wrap {display: flex; justify-content: space-between; flex-wrap: wrap;}
+
+    .member .box{width: 370px; margin: 0 0 30px; border: 5px solid white; padding: 30px; border-radius: 10px; transition: 0.3s;}
+    .member .box p {margin: 0 0 5px;}
+
+    .member .box:hover {box-shadow: 0 0 20px white; border-color: transparent;}
+  </style>
+</head>
+<body>
+  <!--
+    1) 기본 html 틀
+    
+    2) js link 걸기 . type 지정
+    
+        일반적인 경우
+        <script src="" type="text/javascript"></script>
+
+        외부에서 import 사용시
+        <script src="main.js" type="module"></script>
+    
+    3)데이터 export (내보내기)
+        let 변수명 = [{},{}]
+        export default 변수명
+        //파일에서 1개의 종류만 export할 수 있다
+
+    4)데이터 import (받아쓰기)
+        import 변수명 from '파일명.js'
+        -경로가 맞아야함.
+        -export 했던 변수명으로 똑같이 써주기
+
+    5)for문으로 데이터 다루기
+        화면표시 태그를 변수에 누적해 저장
+
+        for(let i =0; i < 변수명.length; i++){
+          tag += `<p>${변수명[i].key}</p>`
+        }
+
+    6)생성된 tag를 innerHTML로 설정
+        부모요소.innerHTML = tag
+
+    ※ json file
+        javascript object notation의 약자
+        확장자 : *.json / *.js
+        인터넷의 데이터 교환 표준중 하나
+        형식 : {key : value}
+                {
+                  name:'arin',
+                  age:30
+                }
+        * value값 자료유형 
+        숫자 : 20
+        문자 : '문자열'
+        booleean : true / false
+        배열 : [ ]
+        객체 : { }
+        빈 값 : null
+
+        -value에 함수가 들어갈 수 있음
+        -형식: function () {} /이건 명칭을 메서드라 한다
+  -->
+
+  <section class="member">
+    <div class="inner">
+      <h2>회원정보</h2>
+      <div class="wrap">
+        
+      </div>
+    </div>
+  </section>
+
+  <p class="name-1"></p>
+  
+  <script src="main.js" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+#0110
+
+1) 기본 html 틀
+    
+    2) js link 걸기 . type 지정
+    
+        일반적인 경우
+        <script src="" type="text/javascript"></script>
+
+        외부에서 import 사용시
+        <script src="main.js" type="module"></script>
+    
+    3)데이터 export (내보내기)
+        let 변수명 = [{},{}]
+        export default 변수명
+        //파일에서 1개의 종류만 export할 수 있다
+
+    4)데이터 import (받아쓰기)
+        import 변수명 from '파일명.js'
+        -경로가 맞아야함.
+        -export 했던 변수명으로 똑같이 써주기
+
+    5)for문으로 데이터 다루기
+        화면표시 태그를 변수에 누적해 저장
+
+        for(let i =0; i < 변수명.length; i++){
+          tag += `<p>${변수명[i].key}</p>`
+        }
+
+    6)생성된 tag를 innerHTML로 설정
+        부모요소.innerHTML = tag
+
+    ※ json file
+        javascript object notation의 약자
+        확장자 : *.json / *.js
+        인터넷의 데이터 교환 표준중 하나
+        형식 : {key : value}
+                {
+                  name:'arin',
+                  age:30
+                }
+        * value값 자료유형 
+        숫자 : 20
+        문자 : '문자열'
+        booleean : true / false
+        배열 : [ ]
+        객체 : { }
+        빈 값 : null
+
+        -value에 함수가 들어갈 수 있음
+        -형식: function () {} /이건 명칭을 메서드라 한다
+
+-------------------------------------------------------------
+
+※삼항연산자
+변수 = (조건) ? 참일때 실행 : 거짓일때 실행;
+
+let toggle = true;
+let isOn = '';
+isOn = (toggle == true) ? "Switch On" : "Switch Off";
+
+-------------------------------------------------------------
+#main.js
+
+import hotdog from "./hotdog.js";
+
+console.log(hotdog)
+
+let hotdog_wrap = document.querySelector('.hotdog .wrap');
+let result = '';
+
+for(let i=0; i < hotdog.length; i++){
+
+  let tag = ['','','']
+
+  tag[0] = `<div class="box">
+            <p class="name">${hotdog[i].title}</p>
+            <p>${hotdog[i].content}</p>
+            <p class="hashtag">`
+  tag[1] = ``
+    for(let j =0; j < hotdog[i].hashtag.length; j++){
+      tag[1] += `<span>${hotdog[i].hashtag[j]}</span>`
+    }
+  tag[2] = `</p></div>`
+          
+  result += tag[0] + tag[1] + tag[2]
+}
+
+hotdog_wrap.innerHTML = result;
+
+
+## 각 태그마다 after 효과는 1개만 사용가능하다
+

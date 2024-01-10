@@ -2,8 +2,8 @@ vs code 확장기능 설치
 1. korean : 한글 언어팩
 2. live server: 실시간 변경내용 브라우저에서 확인 (Ctrl + s 로 반영)
 3. auto tag: 태그 입력시 닫는태그 자동 설정
-4. prittier: 들여쓰기 라인 정렬
-5. indent-rainbox: 들여쓰기 구분(색상으로)
+4. prettier: 들여쓰기 라인 정렬
+5. indent-rainbow: 들여쓰기 구분(색상으로)
 
 
 SVG : 벡터 이미지로 되있어 코드 수정시 이미지 수정되는 파일 형식
