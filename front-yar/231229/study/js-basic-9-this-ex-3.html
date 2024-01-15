@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{font-size: 24px;}
+  </style>
+</head>
+<body>
+  <h1>매개변수 ex3</h1>
+  <p>매개변수 = parameter</p>
+  <p>넘겨주는 값 = arguments</p>
+  
+<script>
+  //매개변수의 기본값 설정 function sayHi(money, name = '누군지 모르겠지만') -> 기본값은 뒤쪽 매개변수로 !!!
+  //ㄴ매개변수값이 채워지면 앞쪽부터 값을 무조건 채우기땜
+  function sayHi( money, name = '누군지 모르겠지만'){
+    console.log(`${name} ! hi~ welcome to script / pay : ${money}`)
+  }
+  sayHi(1, 'arin')
+  sayHi(2, 'leenanhee teacher')
+  sayHi(3)
+
+  //매개변수 여러개 처리할 수 있다
+  function printArguments(){
+    for(const arg of arguments){
+      console.log(arguments) //arguments 형태로 가져오기 (배열사용 불가)
+    }
+  }
+  printArguments('mon','thes','wednes')
+
+   //parameter = 여러개 파라미터 ... 문법으로 해체하기
+  function printRestArguments(...args){
+    for(const arg of args){
+      console.log('참가자 : ', args)
+    }
+  }
+
+  //rset parameter = 변수로 받아와서 처리하기
+  function printRestArguments2(first, second, ...args){
+    for(const arg of args){
+      //console.log(args.length) 배열 형태로 가져오기 (배열관련 함수 사용가능)
+      console.log('1등 : ', first) 
+      console.log('2등 : ', second)
+      console.log('참가자 : ', args)
+    }
+  }
+
+  printArguments()
+  printArguments('aa','bb','cc','dd','ee')
+  printArguments2('aa','bb','cc','dd','ee')
+
+</script>
+</body>
+</html>

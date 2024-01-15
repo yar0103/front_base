@@ -1,0 +1,27 @@
+#0112
+
+.pb-story .box {
+  width: calc((100% - 30px * 1) / 2); margin: 0 0 60px;
+  display: flex; justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+위에처럼 flex-wrap:wrap 작성햇으면
+@media screen and (max-width: 480px) {
+  .pb-story .box{width: 100%;}
+} 이렇게
+
+작성 안했으면 display : block; 로
+
+
+#.box 안에 있는 .post 를 젤 위로 올리고 싶다면,
+부모인 .box에 z-index를 주면 하위요소인 .post도 같이 올라가게 되서
+자식요소인 .post에 z-index를 줘야한다 !!
+
+#import 되있는 파일 연결시에는 스크립트에 type="module" 꼭 추가 !!!
+
+
+# for(let key in student[i]) {
+	console.log(key, student[0][key])
+} -사용시 해석
+	ㄴ student의 0번째 key값 출력

@@ -1,0 +1,199 @@
+
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;} 
+a{text-decoration: none;} 
+
+html{font-size: 16px;}
+.content{width: 100%; padding: 120px 0;}
+.inner{width: 1410px; margin: 0 auto;}
+
+.content.full{padding: 0;}
+.content.full .inner{width: 100%;}
+
+.content .title{margin: 0 0 40px; font: bold 1.75rem 'inherit'; text-align: center; color: #444;}
+.content .wrap{display: flex; flex-direction: row; flex-wrap: wrap;justify-content: space-between;}
+
+@media screen and (max-width: 1200px) {
+  .content{padding: 120px 40px;}
+  .inner{width: 100%;}
+}
+@media screen and (max-width: 768px) {
+  html{font-size: 14px;}
+}
+
+
+/* a태그가 .pic태그 역할임. 
+  a태그 대신div태그 pic클래스로 바꿔서 동일하게 css를 작업해도 됩니다. 
+*/
+
+.promotion .box{position: relative;width: calc((100% - 30px * 3) / 4);}
+.promotion .box > a{position: relative; color: #333; font-size: 18px; font-weight:bold}
+.promotion .box > a::after{
+  content: ''; width: 100%; height: 100%; 
+  position: absolute; left: 0; top: 0; 
+  background : linear-gradient(to top, rgba(0,0,0,0.6), transparent) ;
+  /*아래에서 위로 가면서 그라데이션, 시작점/끝점 */
+  transition: 0.4s; opacity: 0;
+}
+.promotion .box:hover > a::after{opacity: 1;}
+
+.promotion .box a img{width: 100%; display: block;}
+.promotion .box a .badge{
+  position: absolute; left: 0; top: 0; padding: 5px; 
+  background-color: navy; color: #fff;
+  font-size: 12px;
+}
+.promotion .box .post{margin-top: 20px;}
+.promotion .box .post .post-title{font-family: 'Nanum Gothic';}
+.promotion .box:hover .post .post-title{text-decoration: underline #f00;}
+.promotion .box .post .read_more{font-size: 13px; color: #aaa; text-transform: uppercase;}
+
+
+@media screen and (max-width: 1200px) {
+  .promotion .box{width: calc((100% - 24px * 3) / 4);}
+}
+@media screen and (max-width: 768px) {
+  .promotion .box{width: calc((100% - 24px * 1) / 2); margin-bottom: 24px;}
+}
+@media screen and (max-width: 480px) {
+  .promotion .box{width: 100%;}
+}
+
+/* 
+  CSS 작성순서
+
+  1 box - width, margin
+  2 하위 box 
+    (가로나열일경우 - 부모에게 flex적용)
+  3 박스안 내용물 서식 작성
+  4 효과
+
+*/
+
+.pb-story .box {
+  width: calc((100% - 30px * 1) / 2); margin: 0 0 60px;
+  display: flex; justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pb-story .box a {
+  display: block;
+  width: calc((100% - 30px * 1) / 2);
+  color: #333;
+}
+
+.pb-story .box a img {
+  width: 100%;
+  display: block;
+}
+
+.pb-story .box a .post-category{
+  margin: 0 0 20px;
+  font-size: 12px;
+}
+
+.pb-story .box a .post-title{
+  margin: 0 0 20px; font-size: 20px;
+}
+
+.pb-story .box a .post-excerpt {
+  margin: 0 0 20px; font-size: 14px;
+}
+
+.pb-story .box a .post-date{
+  font-size: 12px;
+}
+
+.pb-story .box a .post-category:hover{
+  text-decoration: underline;
+}
+.pb-story .box a .post-title:hover{  
+  text-decoration: underline;
+}
+.pb-story .box a .post-excerpt:hover{  
+  text-decoration: underline;
+}
+
+
+.pb-story .box a.pic{position: relative;}
+.pb-story .box a.pic::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  opacity: 0; transition: 0.4s;
+}
+
+.pb-story .box a.pic:hover::after{
+  opacity: 1;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 1024px) {
+  .pb-story .box{width: 100%;}
+}
+
+@media screen and (max-width: 768px) {
+  .pb-story .box a{width: 100%; margin-bottom: 30px;}
+}
+
+
+/*
+  원본요소 = 부모
+  ::after
+  ::before
+
+  [::after > ::before > 원본요소=부모] <<- 세가지 겹칠때 우선순위
+  img태그는 before, after 못만든다. (닫는태그 없기 땜)
+  -닫는태그가 있을시 : 내용o, 자식o
+
+*/
+
+.magazine .box {
+  position: relative;
+  width: calc((100% - 24px * 2) / 3);
+}
+
+.magazine .box::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0; top: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+.magazine .box > a {
+  width: 100%;
+  display: block;
+}
+
+.magazine .box a img {
+  width: 100%;
+  display: block;
+}
+
+.magazine .box .post {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+  z-index: 1;
+}
+
+.magazine .box .post a {color: #000; font-size: 24px; font-weight: bold;}
+.magazine .box .post .post-title {
+  font-size: 20px;
+  margin: 0 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .magazine .wrap{justify-content: center;}
+  .magazine .box {width: 100%; max-width: 400px; margin: 0 0 30px;}
+}

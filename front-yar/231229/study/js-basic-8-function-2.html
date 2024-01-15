@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #btn {
+      width: 350px;
+      height: 100px;
+      border: none;
+      background-color: pink;
+      color: aliceblue;
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <h1>함수 2 - function</h1>
+  <h2>함수 만드는 방식은 두가지다</h2>
+  <p>1. 함수선언</p>
+  <pre>
+    function 함수이름 (){
+
+    }
+  </pre>
+  <p>2. 함수표현식</p>
+  <pre>
+    let 함수명 = function (){
+
+    }
+  </pre>
+  <p>별도. 화살표함수</p>
+  <pre>
+    let 함수명 = () => {
+
+    }
+  </pre>
+  <span>
+    함수는 호이스팅 가능 / 함수표현식은 호이스팅 불가
+    호이스팅 ? 선언하기 이전 호출 가능한 것
+  </span>
+
+  <span>
+    함수선언과 함수표현식 차이점
+    1 호이스팅 여부
+    2 함수는 다른 코드블록{} 안에 있어도 호출가능 - 전역함수
+      함수표현식은 범위벗어나면 사용불가
+  </span>
+
+  <button type="button" id="btn1">button-function</button>
+  <button type="button" id="btn2">button-arrow function</button>
+
+  <script>
+
+    function myFunc(){
+      console.log('myFunc : 이게 함수 선언이다')
+    }
+    
+    //함수표현식 1
+    let myFunc2 = function (){
+      console.log('myFunc2 : 이건 함수 표현식이다')
+    }
+    //함수표현식 2 (화살표함수)
+    let myFunc3 = () => {
+      console.log('myFunc3 : 이건 함수 표현식이다2')
+    }
+    myFunc() //호이스팅 ok
+    myFunc2() //호이스팅 no : 생성이전에 사용 불가
+    myFunc3() //호이스팅 no : 생성이전에 사용 불가
+
+    //함수표현식의 중요개념
+    //값 대신 함수가 들어감 = 함수가 값처럼 쓰였다 = 함수표현식
+    let btn = document.getElementById('btn1')
+
+    btn.addEventListener('click', () => {
+      console.log(this)
+    });
+    
+  </script>
+</body>
+</html>

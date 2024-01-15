@@ -1,0 +1,31 @@
+#1110
+
+??img를 부모div 에 크기를 어떻게 맞출까
+-width : 100%
+-height : 100%
+둘중 하나는 auto로 맞춰있어야함 (이미지 찌그러지는 현상 방지)
+설정된 값 기준으로 크기가 맞춰짐
+둘다 auto면 원본크기
+
+#부모=flex 적용, 자식 = order : 1; 하면 순서가 변경됨 숫자커질수록 아래로 내려감
+
+#position: static; (absolute 안주려구 저효과를 적용한거임)
+#position : relative; (자기위치에서 좌표값주기위함)
+#position : absolute; (relative자식으로서 relative기준 좌표값주기위함)
+
+
+https://www.ht.co.kr/#sweetNews (해태 사이트)
+독립된 글로 분리될 수 있는 article 쓰기
+
+#인라인요소는 마진,패딩,높이,너비 적용안되지만 absolute주면 적용됨
+
+#text-transform : 대문자나 소문자로 변경
+-none : 입력된 그대로 출력
+-capitalize : 단어의 첫글자를 대문자로 변경
+-uppercase : 모든 글자를 대문자로 변경
+-lowercase : 모든 글자를 소문자로 변경
+-initial : 기본값으로 설정
+-inherit : 부모 요소의 속성값을 상속
+
+#백그라운드 그라데이션 넣기
+background : linear-gradient(to top(시작점), red(색상1), blue(색상2));

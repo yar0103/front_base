@@ -1,0 +1,84 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;} 
+a{text-decoration: none;} 
+
+/* common */
+
+.inner{width: 1170px; margin: 0 auto;}
+.content{width: 100%; padding: 120px 0;}
+
+/* .content.full{padding: 0;}
+.content.full .inner{width: 100%;} */
+
+
+.content .title{margin: 0 0 40px; font: bold 24px 'inherit'; text-align: center; color: #444;}
+.content .wrap{display: flex; flex-flow: row wrap;justify-content: space-between;}
+.content .box{}
+
+@media screen and (max-width:1200px) {
+.content{padding: 120px 40px;}
+.inner{width: 100%;}
+}
+
+@media screen and (max-width: 768px) {
+html{font-size: 10px;}
+}
+
+@media screen and (max-width: 486px) {
+  
+}
+
+.hotdog .box{ 
+  position: relative;
+  width: calc((100% - 30px * 1) / 2); 
+}
+/*라벨달기*/
+.hotdog .box::before{
+  position: absolute;
+  left: 0; top: 0;
+  padding: 3px 5px;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: bold;
+}
+.hotdog .box.new::before{
+  content: 'new';
+  background-color: yellow;
+}
+.hotdog .box.best::before{
+  content: 'best';
+  background-color: tomato;
+}
+
+.hotdog .box .pic{width: 100%;}
+.hotdog .box .pic img{width: 100%;}
+.hotdog .box .info{width: 100%; padding: 20PX 10PX;}
+
+.hotdog .box .info p {font-size: 14px;}
+.hotdog .box .info .name{margin-bottom: 10PX; font: bold 16PX 'inherit'; text-align: center;}
+/*
+  높이 = 줄간격 * 최대줄수 설정
+  ex) line-height : 20px; 최대줄수 : 4줄 / 높이 = 80px
+*/
+.hotdog .box .info .txt{
+  margin-bottom: 20px; 
+  line-height: 20px;
+  display: -webkit-box; /*webkit-box-orient이거쓸라면 써 (배치방법) */
+  -webkit-line-clamp: 2; /* text line 갯수 조절 */
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+.hotdog .box .info .hashtag{}
+.hotdog .box .info .hashtag span{
+  padding: 0 5px; background-color: #eee;  
+}
+
+@media screen and (max-width: 1200px) {
+  .hotdog .box {width: calc((100% - 24px * 3) / 4); margin-bottom: 24px;}
+}
+@media screen and (max-width: 768px) {
+  .hotdog .box {width: calc((100% - 24px * 1) / 2);}
+}
+@media screen and (max-width: 480px) {
+  .hotdog .box {width: 100%;}
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{font-size: 24px;}
+  </style>
+</head>
+<body>
+  <h1>function ex2</h1>
+  
+<script>
+
+  function sumNumber(){
+    //const sum = function(a,b) 이부분 화살표함수로 바꾸기
+    // const sum = (a,b)=>{
+    //   return a + b
+    // } 리턴 생략 문법
+    const sum = (a,b) => a + b
+    return sum(40,10)
+  }
+  console.log(sumNumber())
+
+
+  //화살표함수 줄여보기 연습
+  function sumNumber2(){
+    //호출되기 전 반드시 존재해야함
+    let addNumber = (a) => (b)=> (c)=> a+b+c //이거 return 밑에 쓰면 에러난다
+    return addNumber(1)(2)(3)
+
+  }
+
+  console.log(sumNumber2())
+
+
+
+
+  //첫번째
+  function getFullName (){
+    return this.firstName + ' ' + this.lastName
+  }
+
+  const user = {
+    firstName : 'Ted',
+    lastName : 'Chang',
+    getFullName: getFullName,
+  }
+
+  console.log(user.getFullName())
+
+</script>
+</body>
+</html>

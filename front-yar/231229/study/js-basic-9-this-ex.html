@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #btn {
+      width: 350px;
+      height: 100px;
+      border: none;
+      background-color: pink;
+      color: aliceblue;
+      font-size: 32px;
+    }
+    p{font-size: 24px;}
+  </style>
+</head>
+<body>
+  <h1>this ex</h1>
+  
+  <script>
+    //변수값 초기화 안됐어도 undefinded
+    //해당 속성값 없어도 undefinded
+
+
+    //console.log(this) window
+    let printThisTitle = function() {     
+      console.log(this.title) //undefinded
+    }
+    printThisTitle() //value가 undefinded 나옴 - window를 가리키고 있고 title이 없음
+
+    const courseA = {
+      title: 'programing base in javascript',
+      printTitle: printThisTitle //함수연결
+    }
+    courseA.printTitle()
+
+    const courseB = {
+      title: 'computer',
+      printTitle: courseA.printTitle //함수연결
+    }
+    courseB.printTitle()
+
+    const courseC = {
+      title: 'webperblishing',
+      printTitle: courseB.printTitle //함수연결
+    }
+    courseC.printTitle()
+
+  </script>
+</body>
+</html>

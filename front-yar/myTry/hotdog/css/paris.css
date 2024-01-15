@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'NPSfontBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;} 
+a{text-decoration: none;} 
+
+/* common */
+
+.inner{width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap;}
+.content{width: 100%; padding: 120px 0;}
+
+.content .title{
+  margin: 0 0 40px; 
+  font: bold 16px 'inherit'; 
+  text-align: center; 
+  color: #444;
+}
+.content .wrap{
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 5px;
+  position: relative;
+}
+.content .wrap figure{
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+}
+.content .wrap span{
+  font-size: 11px;
+}
+.content .wrap .title {
+  margin: 10px 0;
+  font-family: NPSfontBold;
+}
+.content .wrap .badge::before{
+  content: '예정';
+  background-color: darkblue;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+.content .wrap .badge::before{
+  content: '진행중';
+  background-color: darkblue;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content .inner {width: calc((100% - 24px * 3) / 4); margin-bottom: 24px;}
+}
+@media screen and (max-width: 768px) {
+  .content .inner {width: calc((100% - 24px * 1) / 2); }
+}
+@media screen and (max-width: 480px) {
+  .content .inner {width: 100%;}
+}
+

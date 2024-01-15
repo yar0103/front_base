@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #btn {
+      width: 350px;
+      height: 100px;
+      border: none;
+      background-color: pink;
+      color: aliceblue;
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <h1>this</h1>
+  <p>스코프 = { } 중괄호 범위</p>
+
+  <p><b>굵게</b></p>
+  <p><i>기울기</i></p>
+  <p><u>밑줄</u></p>
+ 
+
+
+  <button type="button" id="btn1">button-function</button>
+  <button type="button" id="btn2">button-arrow function</button>
+
+  <script>
+    //전역 this 출력
+    console.log(this) // window
+
+    //function this 출력 (일반함수)
+    function myThis(){
+      console.log(this) //window
+    }
+    myThis()
+
+    //객체-function this 출력 (객체 메서드)
+    let obj = {
+      myObjThis : function(){
+        console.log(this) //현재객체
+      }
+    }
+    obj.myObjThis()
+
+    //화살표함수-function this 출력
+    let objArrow = {
+      myObjThis : () => {
+        console.log(this) //window
+        //화살표함수는 this를 현재객체, 매개변수에 연결하지 않는다. 상위범위(스코프)의 this를 그대로 상속한다
+      }
+    }
+    objArrow.myObjThis()
+
+
+
+    //function으로 사용할 때 - 이벤트 핸들러, 이벤트 대상을 가리킴
+    let btn = document.getElementById('btn1')
+    let btn2 = document.getElementById('btn2')
+
+    btn1.addEventListener('click', function(){
+      console.log('클릭한 대상 : ') //클릭한대상
+      console.log(this)
+
+    let test = ()=>{
+      console.log(this) //부모의 this
+    }
+    });
+
+    //화살표함수 사용할 때 - 상위(부모) this 상속
+    btn2.addEventListener('click', () => {
+      console.log('상위 this 상속 : ') //무조건 부모의 this
+      console.log(this) 
+    });
+    
+  </script>
+</body>
+</html>
