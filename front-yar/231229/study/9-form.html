@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main{display: flex; justify-content: center; align-items: center;}
+  </style>
+</head>
+<body>
+  <main class="login">
+    <form action="파일명.jsp">
+    <fieldset>
+      <legend>title</legend>
+      <div>
+        <label for="idBox">id: </label>
+        <input type="text" id="idBox" name="id">
+      </div>
+      <div>
+        <span>gender: </span>
+        <span>
+          <input type="radio" id="genderBox" name="gender" value="man">
+          <label for="genderBox">man</label>
+          <input type="radio" id="genderBox" name="gender" value="waman">
+          <label for="genderBox">waman</label>
+
+        </span>
+      </div>
+      <div>
+        <label for="pwBox">pw: </label>
+        <input type="password" id="pwBox" name="pw">
+      </div>
+      <div>
+        <span>hobby: </span>
+        <span>
+          <input type="checkbox" id="hobbyBox" name="hobby" value="movie">
+          <label for="hobbyBox">movie</label>
+          <input type="checkbox" id="hobbyBox" name="hobby" value="music">
+          <label for="hobbyBox">music </label>
+          <input type="checkbox" id="hobbyBox" name="hobby" value="piano">
+          <label for="hobbyBox">piano </label>
+        </span>
+      </div>
+      <div>
+        <input type="submit" value="ok" name="" id="">
+        <input type="reset" value="cancle" name="" id="">
+        <input type="button" value="button" name="" id="">
+        <br><br>
+        <button type="submit">defalt</button>
+        <button type="reset">reset</button>
+        <button type="button">button</button>
+      </div>
+    </fieldset>
+  </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    a{text-decoration: none;}
+    /* main{display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+
+    .inner{
+      width: 1170px;
+      margin-left: 30px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {  
+      border: 1px solid lightgray;   
+      margin: 8px 0;
+      height: 30px;
+      border-radius: 5px;
+    }
+
+    textarea {
+      border: 1px solid lightgray;
+      border-radius: 5px;
+    }
+
+    h1{
+      margin: 30px 0;
+    }
+    
+    .padding{
+      padding-left: 10px;
+      width: 360px;
+    }
+    .nameWrap {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    .l-name {
+      margin-left: 23px;
+    }
+    
+    .lavel {
+      display: inline;
+    }
+    
+    .check {
+      margin-top: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      background-color: orange;
+      color: #fff;
+      font-size: 20px;
+      margin-left: 165px;
+      padding: 5px 40px;
+      border-radius: 5px;
+      border: none;
+    } */
+    body {background-color: #222;}
+    main{
+      height: 100vh; /* vh단위는 현재 브라우저를 기준으로 함 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .wrap{
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    .wrap > div {margin: 10px 0;}
+    .wrap label { /* 라벨은 inline 요소임 */ 
+      display: block;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 5px;
+    }
+    .wrap input, .wrap textarea{
+      border: 1px solid #ddd;
+      height: 30px;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: #666;
+    }
+    .w100{width: 100%;}
+    .nameBox{display: flex; justify-content: space-between;}
+    .nameBox span {border: 1px solid red;}
+    .nameBox div {width: 48.5%;}
+    .msgBox textarea{width: 100%; height: 100px;}
+    .btnBox{display: flex; justify-content: space-between; align-items: center;}
+    .btnBox label{display: inline;}
+</style>
+</head>
+<body>
+  <!-- <form action="test.jsp">
+    <div class="inner">
+      <h1>contact us</h1>
+      <div class="email">
+        <label for="email">Your Email</label>
+        <input type="email" placeholder="email@example.com" class="padding">
+      </div>
+
+      <div class="nameWrap">
+        <div class="f-name">
+          <label for="FirstName">First name</label>
+          <input type="text" name="firstname">
+        </div>  
+        <div class="l-name">
+          <label for="LastName">Last name</label>
+          <input type="text" name="lastname">
+        </div>
+      </div>
+
+        <p class="message">Message</p>
+          <textarea name="" id="" cols="50" rows="10">
+          </textarea>
+        
+      <div class="check">
+        <input type="checkbox" name="check" id="subscribe">
+        <label for="subscribe">Subscribe</label>
+        <div class="button">
+          <button>SEND</button>
+        </div>
+      </div>
+    </div>
+  </form> -->
+  <main>
+    <div class="wrap">
+      <h1 class="title">Contact Us</h1>
+      <div class="emailBox">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="email@example.com" class="w100">
+      </div>
+      <div class="nameBox">
+        <div class="firstNameBox">
+          <label for="firstName">FirstName</label>
+          <input type="text" id="firstName" class="w100">
+        </div>
+        <div class="lastNameBox">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" class="w100">
+        </div>
+        <div class="msgBox">
+          <label for="msBox"></label>
+          <textarea name="message" id="msgBox" cols="50" rows="10"></textarea>
+        </div>
+        <div class="btnBox">
+          <span>
+            <input type="checkbox" id="optCheeck">
+            <label for="optCheck">Subscribe</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

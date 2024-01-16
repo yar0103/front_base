@@ -92,8 +92,6 @@ hotdog_wrap.innerHTML = result;
 ## 각 태그마다 after 효과는 1개만 사용가능하다
 
 
-## git 사용시 commit 자꾸 틀리는데 ㅡㅡ
-	Ins키 누른 후 ahah(이름명)쓰고 esc 후 :wq 쓰면 나가짐
-add . -> commit -> push 순선데
+
 
 

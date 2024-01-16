@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main{display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+    input[type="text"]{border-color: aquamarine;}
+  </style>
+</head>
+<body>
+  <form action="test.jsp">
+
+    <p>basic text input</p>
+    <input type="text" placeholder="id input">
+
+    <p>pw input</p>
+    <input type="password" placeholder="pw input">
+
+    <p>search</p>
+    <input type="search">
+
+    <p>email : 자동 이메일 형식 검사</p>
+    <input type="email">
+
+    <p>url : 자동 이메일 형식 검사</p>
+    <input type="url">
+
+    <p>첨부파일</p>
+    <input type="file">
+
+    <p>날짜선택</p>
+    <input type="date">
+
+    <p>radio Box</p>
+    <input type="radio" name="radioBtn" id="radio-1">
+    <label for="radio-1">1</label>
+    <input type="radio" name="radioBtn" id="radio-2">
+    <label for="radio-2">2</label>
+    <input type="radio" name="radioBtn" id="radio-3">
+    <label for="radio-3">3</label>
+
+    <p>checkbox</p>
+    <input type="checkbox" name="checkBtn" id="check-1">
+    <label for="check-1">1</label>
+    <input type="checkbox" name="checkBtn" id="check-2">
+    <label for="check-2">2</label>
+    <input type="checkbox" name="checkBtn" id="check-3">
+    <label for="check-3">3</label>
+
+    <label for="">size</label>
+    <select name="" id="">
+      <option value="">-------------</option>
+      <option value="">44</option>
+      <option value="">55</option>
+      <option value="">66</option>
+    </select>
+    <br>
+    <!--50글자10줄
+        textarea 비활성화 : disabled                                                                                             
+    -->
+    <textarea name="" id="" cols="50" rows="10" >
+      내용을 미리 입력해놓으면
+    </textarea>
+
+    <br><br><br>
+    <button>submit</button>
+  </form>
+</body>
+</html>

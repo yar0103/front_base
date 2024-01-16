@@ -13,7 +13,7 @@ for(let i=0; i < menu.length; i++){
 //console.log(menu.length)
 function menuClose(item){
   for(let j = 0; j < item.length; j++){
-    if(i != j){ //i ()= 현재 클릭 요소 순번) 이 아닌것들만 아래 효과 적용
+    if(i != j){ //i ()= 현재 클릭 요소 순번이 아닌것들만 아래 효과 적용
     item[j].nextElementSibling.style.maxHeight = null
     item[j].classList.remove('on');
     }
