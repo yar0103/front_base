@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol, ul, li {list-style: none;}
+a {text-decoration: none;}
+
+body{
+  background-color: #222;
+}
+
+.login {
+  
+  height: 100vh;
+  padding: 150px 0;
+}
+
+.login .loginBox{
+  max-width: 400px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.login .title{
+  margin: 0 0 20px;
+  font: bold 24px 'inherit';
+  text-align: center;
+}
+.login .loginBox {
+  position: relative;
+}
+.login .loginBox .boxColor{
+  position: relative;
+  border: 1px solid #ddd;
+}
+.login .loginBox .boxColor.idBox{ border-radius: 5px 5px 0 0;}
+.login .loginBox .boxColor.pwBox{border-radius: 0 0 5px 5px ;}
+
+.login .loginBox .boxColor label{
+  position: absolute;
+  left: 10px; top: 5px;
+  line-height: 40px;
+  transition: 0.2s;
+}
+
+.login .loginBox .boxColor:hover label{
+  top: 5px;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.login .loginBox .boxColor .inputBox{
+  width: 100%;
+  padding: 10px 10px 0;
+  line-height: 40px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.login .loginBox .loginBtnBox #loginBtn {
+  width: 100%;
+}

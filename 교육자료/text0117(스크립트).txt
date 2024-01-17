@@ -1,0 +1,37 @@
+#0117
+
+부트스트랩 아이콘 가져오기
+https://icons.getbootstrap.kr/?q=lock#%EC%95%84%EC%9D%B4%EC%BD%98
+ㄴ아이콘폰트로 가져오기
+
+container-lg(사이즈) - 어디서부터 가변형으로 변하냐
+box같은데 col-sm(사이즈) - 어디서부터 block으로 쌓일것이냐
+
+-sm : 576px
+-md : 768px
+-lg : 992px
+-xl : 1200px
+-xxl : 1400px
+
+css 잡을때
+
+.login .loginBox .boxColor.pwBox{} -> 한칸띄면 자식요소 선택
+.login .loginBox .boxColor .inputBox{} -> 한칸 안띄우면
+
+
+
+------------------------------------------------
+평가 -23일 4시까지
+
+메인페이지 1장 && 로그인페이지 1장
+(부트스트랩활용)/ 반응형도 되도록
+1 주제정하기
+2 비주얼섹션
+3 내용섹션
+4 푸터
+
+모달
+<!-- Vertically centered modal -->
+<div class="modal-dialog modal-dialog-centered">
+  ...
+</div>
